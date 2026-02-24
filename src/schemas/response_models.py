@@ -1,4 +1,4 @@
-from typing import Any, Dict, List
+from typing import Any, List
 
 from pydantic import BaseModel, ConfigDict
 
@@ -8,8 +8,10 @@ class ProjectsResponseModel(BaseModel):
     project_description: str
     learnings: List[str]
     languages: List[str]
-    frameworks: Dict
-    links: List[dict]
+    frameworks: List[str]
+    tools: List[str]
+    github: str
+    link: str | None
     preview_image: str
 
     model_config = ConfigDict(from_attributes=True)

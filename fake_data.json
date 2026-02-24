@@ -1,0 +1,50 @@
+[
+  {
+    "project_name": "TaskFlow Pro",
+    "project_description": "A modern task management web app that helps teams collaborate, assign tasks, track deadlines, and visualize productivity using kanban boards and analytics dashboards.",
+    "learnings": [
+      "State management with React Context API",
+      "REST API integration and authentication with JWT",
+      "Optimizing database queries for performance",
+      "Responsive UI/UX design principles"
+    ],
+    "languages": ["JavaScript", "TypeScript", "SQL"],
+    "frameworks": ["React", "Node.js", "Express"],
+    "tools": ["Postman", "Docker", "GitHub Actions", "Figma"],
+    "github": "https://github.com/amit4218",
+    "link": "https://taskflow-pro-demo.vercel.app",
+    "preview_image": "https://source.unsplash.com/800x600/?kanban,workspace"
+  },
+  {
+    "project_name": "FitTrack Analytics",
+    "project_description": "A fitness tracking dashboard that visualizes workout performance, calorie intake, and progress trends using interactive charts and personalized insights.",
+    "learnings": [
+      "Data visualization with Chart.js",
+      "User authentication with Firebase",
+      "Real-time database updates",
+      "Mobile-first responsive development"
+    ],
+    "languages": ["JavaScript", "HTML", "CSS"],
+    "frameworks": ["Next.js", "Tailwind CSS"],
+    "tools": ["Firebase", "Vercel", "Git", "VS Code"],
+    "github": "https://github.com/amit4218",
+    "link": "https://fittrack-analytics.vercel.app",
+    "preview_image": "https://source.unsplash.com/800x600/?fitness,dashboard"
+  },
+  {
+    "project_name": "DevConnect API",
+    "project_description": "A RESTful API platform for developers to create profiles, share projects, and connect with other developers through messaging and collaboration tools.",
+    "learnings": [
+      "Building scalable REST APIs",
+      "Role-based access control implementation",
+      "MongoDB schema design",
+      "CI/CD pipeline automation"
+    ],
+    "languages": ["TypeScript", "JavaScript"],
+    "frameworks": ["NestJS", "Express"],
+    "tools": ["MongoDB Atlas", "Docker", "GitHub Actions", "Swagger"],
+    "github": "https://github.com/amit4218",
+    "link": "https://devconnect-api-demo.onrender.com",
+    "preview_image": "https://source.unsplash.com/800x600/?api,code"
+  }
+]
