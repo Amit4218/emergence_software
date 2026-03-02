@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Any, List
 
 from pydantic import BaseModel, ConfigDict
@@ -37,3 +38,18 @@ class SuccessResponseModel(BaseModel):
     status: int = 200
     message: str = "successful"
     data: Any = None
+
+
+class MessageResponseModel(BaseModel):
+    name: str
+    email: str
+    message: str
+    created_at: datetime
+
+    model_config = ConfigDict(from_attributes=True)
+
+
+class MessagesListSuccessResponse(BaseModel):
+    status: int = 200
+    message: str = "successful"
+    data: list[MessageResponseModel]

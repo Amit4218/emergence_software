@@ -4,9 +4,11 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from config.db import get_db
-from src.models.project_model import Project
+from src.models.project_model import Message, Project
+from src.schemas.request_model import MessageRequestBody
 from src.schemas.response_models import (
     ErrorResponseModel,
+    MessagesListSuccessResponse,
     ProjectsListSuccessResponse,
     ProjectsResponseModel,
     SuccessResponseModel,
@@ -40,3 +42,22 @@ def save_project_data(data: ProjectsResponseModel, db: Session = Depends(get_db)
         return SuccessResponseModel()
     except Exception:
         return ErrorResponseModel()
+
+
+@siteRouter.post("/message", response_model=SuccessResponseModel)
+def save_message(data: MessageRequestBody, db: Session = Depends(get_db)):
+    message = Message(**data.model_dump())
+    db.add(message)
+    db.commit()
+    db.refresh(message)
+    return SuccessResponseModel()
+
+
+@siteRouter.get("/messages", response_model=MessagesListSuccessResponse)
+def get_messages(db: Session = Depends(get_db)):
+    messages = db.execute(select(Message)).scalars().all()
+    return {
+        "status": 200,
+        "message": "successful",
+        "data": messages,
+    }
